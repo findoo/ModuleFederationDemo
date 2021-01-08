@@ -1,0 +1,24 @@
+name: Publish
+
+on:
+  push:
+    branches:
+      - 'main'
+    tags-ignore:
+      - '*.*'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 12
+          registry-url: https://registry.npmjs.org/
+      - run: yarn install
+      - run: git config --global user.email "publishing-bot@finlaysmith.co.uk"
+      - run: git config --global user.name "Publishing Bot"
+      - run: yarn publish-lerna
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}

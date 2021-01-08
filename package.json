@@ -1,0 +1,16 @@
+{
+  "name": "@namespace/module-federation-demo",
+  "private": true,
+  "scripts": {
+    "bootstrap": "lerna bootstrap",
+    "build": "lerna run build --stream",
+    "publish-lerna": "lerna version --conventional-commits --yes",
+    "start": "lerna run start --stream"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "dependencies": {
+    "lerna": "3.22.1"
+  }
+}
