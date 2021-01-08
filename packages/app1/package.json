@@ -1,6 +1,6 @@
 {
   "name": "@namespace/app",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "devDependencies": {
     "@babel/core": "7.10.3",
     "@babel/preset-react": "7.10.1",

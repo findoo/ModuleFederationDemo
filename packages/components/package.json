@@ -1,6 +1,6 @@
 {
   "name": "@namespace/components",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "devDependencies": {
     "@babel/core": "7.10.3",
     "@babel/preset-react": "7.10.1",
